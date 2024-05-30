@@ -1,1 +1,158 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", Regular;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 24px 16px;
+  border-bottom: 3px solid grey;
+  position: fixed;
+  top: 0;
+  background-color: white;
+}
+
+header img {
+  cursor: pointer;
+}
+
+nav > a {
+  font-size: 16px;
+  padding: 0 8px;
+  text-decoration: none;
+  color: black;
+}
+
+.bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 16px;
+}
+
+.menu {
+  padding: 0 8px;
+}
+
+.personal {
+  padding: 0 24px;
+}
+
+h1 {
+  font-size: 32px;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 80px;
+  padding-left: 23px;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding-bottom: 32px;
+  max-width: 1280px;
+  justify-items: center;
+}
+
+.product-image {
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.product-name {
+  font-size: 14px;
+  color: black;
+  text-align: left;
+}
+
+.product-price {
+  font-weight: 700;
+  font-size: 14px;
+  color: black;
+  text-align: right;
+}
+
+.product-image:hover {
+  height: 90%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #212429;
+  padding: 32px;
+}
+
+footer > div > p {
+  color: white;
+  padding: 0 8px;
+  cursor: pointer;
+  padding-top: 8px;
+}
+
+footer > div > div > img {
+  padding-top: 4px;
+}
+
+.icono {
+  border-radius: 32px;
+  background-color: white;
+  padding: 10px 10px;
+}
+.info {
+  display: flex;
+}
+
+@media (max-width: 920px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 16px;
+    border-bottom: 3px solid grey;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .user {
+    display: none;
+  }
+
+  .products-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .info {
+    padding: 16px;
+    border-bottom: 2px solid white;
+  }
+}
